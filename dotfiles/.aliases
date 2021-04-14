@@ -1,0 +1,8 @@
+# Bash, zsh compatible aliases
+if [ 'command -v exa' ]; then 
+  echo 'exa found'
+  alias ll='exa -lh'
+else
+  echo 'exa NOT found'
+  alias ll='ls -lh'
+fi
