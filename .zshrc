@@ -106,9 +106,9 @@ fi
 p() { pushd $1 }
 pp() { popd }
 
-source dotfiles/.aliases
+source $HOME/dotfiles/.aliases
 source $ZSH/oh-my-zsh.sh
-source .z-rupa/z.sh
+source $HOME/.z-rupa/z.sh
 
 # 04/08/2021, JB: added for cabal builds for Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
