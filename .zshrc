@@ -70,8 +70,6 @@ ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "nebirhos" "sunrise" "bureau" )
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -109,6 +107,8 @@ p() { pushd $1 }
 pp() { popd }
 
 source dotfiles/.aliases
+source $ZSH/oh-my-zsh.sh
+source .z-rupa/z.sh
 
 # 04/08/2021, JB: added for cabal builds for Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
