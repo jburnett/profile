@@ -1,8 +1,14 @@
 # Bash, zsh compatible aliases
 if [ 'command -v exa' ]; then 
-  echo 'exa found'
+  unalias l
   alias ll='exa -lh'
+  alias la='exa -la'
+  alias lsa='exa -a'
+  alias ls='exa -G'
 else
-  echo 'exa NOT found'
+  unalias l
+  alias la='ls -lAh'
   alias ll='ls -lh'
+  alias ls='ls -G'
+  alias lsa='ls -lah'
 fi
