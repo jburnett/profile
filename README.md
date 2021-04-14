@@ -3,9 +3,12 @@ Profile config for Unix-like systems
 
 ## Install
 
-Clone this repo with _--recurse-submodules_
+1) Clone this repo with _--recurse-submodules_
 
-Simply run _install-profile.sh_
+   `git clone --recurse-submodules git@github.com:jburnett/profile`
+
+2) Review [dependencies](#dependencies) to determine if pathing is correct
+3) Run _install-profile.sh_
 
 ### Dependencies
 
