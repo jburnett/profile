@@ -5,6 +5,8 @@ if [ 'command -v exa' ]; then
   alias la='exa -la'
   alias lsa='exa -a'
   alias ls='exa -G'
+  # Set exa's date column to cyan
+  export EXA_COLORS="da=36"
 else
   unalias l
   alias la='ls -lAh'
