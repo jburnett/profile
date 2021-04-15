@@ -114,3 +114,8 @@ source $HOME/dotfiles/.aliases
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
+# Finally, source local .env, if it exists, to override any of these defaults
+if [ -f ".env" ]; then
+    echo "Loading local .env"
+    source .env
+fi
