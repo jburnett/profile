@@ -14,3 +14,7 @@ else
   alias ls='ls -G'
   alias lsa='ls -lah'
 fi
+
+# aliases for pushd and popd
+alias p='pushd'
+alias pp='popd'

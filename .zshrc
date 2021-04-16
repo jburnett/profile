@@ -102,9 +102,6 @@ if [ -d $HOME/go/bin ]; then
     PATH=$PATH:$HOME/go/bin
 fi
 
-# 04/05/2021, JB: functions as aliases
-p() { pushd $1 }
-pp() { popd }
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.z-rupa/z.sh
