@@ -103,16 +103,27 @@ if [ -d $HOME/go/bin ]; then
 fi
 
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/.z-rupa/z.sh
-source $HOME/dotfiles/.aliases
-
 # 04/08/2021, JB: added for cabal builds for Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+
+# 04/16/2021, JB: added nvm support
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+### DON'T add below here
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/.z-rupa/z.sh
+source $HOME/dotfiles/.aliases
 
 # Finally, source local .env, if it exists, to override any of these defaults
 if [ -f ".env" ]; then
     echo "Loading local .env"
     source .env
 fi
+
+### DON'T add here; add above the source statements
