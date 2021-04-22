@@ -1,5 +1,5 @@
 # Bash, zsh compatible aliases
-if [ 'command -v exa' ]; then 
+if [ `command -v exa` ]; then 
   unalias l
   alias ll='exa -lh'
   alias la='exa -la'
