@@ -101,7 +101,9 @@ plugins=(git)
 if [ -d $HOME/go/bin ]; then
     PATH=$PATH:$HOME/go/bin
 fi
-
+if [ -d $HOME/.cargo/bin ]; then
+    PATH=$PATH:$HOME/.cargo/bin
+fi
 
 # 04/08/2021, JB: added for cabal builds for Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
