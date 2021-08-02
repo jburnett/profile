@@ -108,6 +108,10 @@ fi
 if [ -d $HOME/.cargo/bin ]; then
     PATH=$PATH:$HOME/.cargo/bin
 fi
+# 08/02/2021, JB: include ~/.local/bin for protoc
+if [ -d $HOME/.local/bin ];then
+    PATH=$PATH:$HOME/.local/bin
+fi
 
 # 04/08/2021, JB: added for cabal builds for Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
