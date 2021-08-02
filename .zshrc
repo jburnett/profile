@@ -97,6 +97,10 @@ plugins=(git)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #####
+# 08/02/2021, JB: include go
+if [ -d /usr/local/go/bin ]; then
+    PATH=$PATH:/usr/local/go/bin
+fi
 # 04/05/2021, JB: include user go bins in path
 if [ -d $HOME/go/bin ]; then
     PATH=$PATH:$HOME/go/bin
