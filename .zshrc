@@ -129,6 +129,9 @@ export NVM_DIR="$HOME/.nvm"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.z-rupa/z.sh
 source $HOME/dotfiles/.aliases
+if command -v plz; then
+    source <(plz --completion_script)
+fi
 
 # Finally, source local .env, if it exists, to override any of these defaults
 if [ -f ".env" ]; then
