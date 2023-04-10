@@ -19,7 +19,7 @@ The install script expects this repo to be at $HOME/src/github.com/jburnett/prof
 Execution order
 .zshenv - read every time, but generally best to just use .zprofile & .zshrc
 .zprofile - at login
-.zshrc - internactive
+.zshrc - interactive
 .zlogin - similar to .zprofile, but read after .zshrc
 .zlogout - at logout
 
