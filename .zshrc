@@ -1,5 +1,4 @@
-echo "--- .zshrc ---"
-echo "DOTNET_ROOT is $DOTNET_ROOT"
+# echo "--- .zshrc ---"
 
 
 # If you come from bash you might have to change your $PATH.
