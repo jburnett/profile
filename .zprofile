@@ -1,3 +1,4 @@
+## .zprofile only runs once on login##
 # echo "--- .zprofile ---"
 
 # Settings for both interactive and non-interactive shells

@@ -1,4 +1,6 @@
-# echo "--- .zshrc ---"
+echo "--- .zshrc ---"
+echo "DOTNET_ROOT is $DOTNET_ROOT"
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -97,20 +99,33 @@ plugins=(git)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #####
+# 04/10/2023, JB: reduced dups in PATH by checking is already in PATH
 # 08/02/2021, JB: include go
 if [ -d /usr/local/go/bin ]; then
-    PATH=$PATH:/usr/local/go/bin
+    # if not already in PATH
+    if [[ $PATH == ?(*:)/usr/local/go/bin?(:*) ]]; then
+        PATH=$PATH:/usr/local/go/bin
+    fi
 fi
 # 04/05/2021, JB: include user go bins in path
 if [ -d $HOME/go/bin ]; then
-    PATH=$PATH:$HOME/go/bin
+    # if not already in PATH
+    if [[ $PATH == ?(*:)$HOME/go/bin?(:*) ]]; then
+        PATH=$PATH:$HOME/go/bin
+    fi
 fi
 if [ -d $HOME/.cargo/bin ]; then
-    PATH=$PATH:$HOME/.cargo/bin
+    # if not already in PATH
+    if [[ $PATH == ?(*:)$HOME/.cargo/bin?(:*) ]]; then
+        PATH=$PATH:$HOME/.cargo/bin
+    fi
 fi
 # 08/02/2021, JB: include ~/.local/bin for protoc
 if [ -d $HOME/.local/bin ];then
-    PATH=$PATH:$HOME/.local/bin
+    # if not already in PATH
+    if [[ $PATH == ?(*:)$HOME/.local/bin?(:*) ]]; then
+        PATH=$PATH:$HOME/.local/bin
+    fi
 fi
 
 # 04/08/2021, JB: added for cabal builds for Cardano
