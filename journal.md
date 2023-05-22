@@ -14,3 +14,7 @@
         fi
     fi
     ```
+
+### 05/22/2023
+
+- Added DOTNET_ROOT to .zshrc

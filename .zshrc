@@ -138,6 +138,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# 05/22/2023, JB: added DOTNET_ROOT
+if [ -d /usr/share/dotnet ]; then
+    if [ -z $DOTNET_ROOT ]; then
+        export DOTNET_ROOT=/usr/share/dotnet
+    fi
+fi
+
 ### DON'T add below here
 
 source $ZSH/oh-my-zsh.sh
