@@ -145,6 +145,12 @@ if [ -d /usr/share/dotnet ]; then
     fi
 fi
 
+
+# 05/30/2023, JB: added starship for more info at prompts
+#  if whence finds starship, start it
+whence -p starship > /dev/null 2>&1 && eval "$(starship init zsh)"
+
+
 ### DON'T add below here
 
 source $ZSH/oh-my-zsh.sh
