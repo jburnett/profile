@@ -102,21 +102,32 @@ plugins=(git)
 # 08/02/2021, JB: include go
 if [ -d /usr/local/go/bin ]; then
     # if not already in PATH
-    if [[ $PATH == ?(*:)/usr/local/go/bin?(:*) ]]; then
+    # if [[ $PATH != ?(*:)/usr/local/go/bin?(:*) ]]; then
+    if [[ $PATH != */usr/local/go/bin* ]]; then
+        # echo "Adding /usr/local/go/bin to PATH"
         PATH=$PATH:/usr/local/go/bin
     fi
 fi
 # 04/05/2021, JB: include user go bins in path
 if [ -d $HOME/go/bin ]; then
     # if not already in PATH
-    if [[ $PATH == ?(*:)$HOME/go/bin?(:*) ]]; then
+    if [[ $PATH != *$HOME/go/bin* ]]; then
+        # echo "Adding $HOME/go/bin to PATH"
         PATH=$PATH:$HOME/go/bin
     fi
 fi
 if [ -d $HOME/.cargo/bin ]; then
     # if not already in PATH
-    if [[ $PATH == ?(*:)$HOME/.cargo/bin?(:*) ]]; then
+    if [[ $PATH != *$HOME/\.cargo/bin* ]]; then
+        # echo "Adding $HOME/.cargo/bin to PATH"
         PATH=$PATH:$HOME/.cargo/bin
+    fi
+fi
+if [ -d $HOME/.dotnet/tools ]; then
+    # if not already in PATH
+    if [[ $PATH != *$HOME/\.dotnet/tools* ]]; then
+        # echo "Adding $HOME/.dotnet/tools to PATH"
+        PATH=$PATH:$HOME/.dotnet/tools
     fi
 fi
 # 08/02/2021, JB: include ~/.local/bin for protoc
