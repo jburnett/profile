@@ -11,4 +11,10 @@
 
 # Key bindings
 # ------------
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+    # Linux location
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+else
+    # MacOS location
+    source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+fi
