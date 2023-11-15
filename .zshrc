@@ -133,7 +133,7 @@ fi
 # 08/02/2021, JB: include ~/.local/bin for protoc
 if [ -d $HOME/.local/bin ];then
     # if not already in PATH
-    if [[ $PATH == ?(*:)$HOME/.local/bin?(:*) ]]; then
+    if [[ $PATH != *$HOME/\.local/bin* ]]; then
         PATH=$PATH:$HOME/.local/bin
     fi
 fi
