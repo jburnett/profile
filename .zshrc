@@ -179,3 +179,4 @@ fi
 ### DON'T add here; add above the source statements
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+autoload -Uz compinit && compinit
