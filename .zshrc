@@ -180,3 +180,15 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -Uz compinit && compinit
+
+source "$HOME/.config/broot/launcher/bash/br"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
