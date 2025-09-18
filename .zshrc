@@ -181,7 +181,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -Uz compinit && compinit
 
-source "$HOME/.config/broot/launcher/bash/br"
+[ -f ~/.config/broot/launcher/bash/br ] && source "$HOME/.config/broot/launcher/bash/br"
 
 export WASMTIME_HOME="$HOME/.wasmtime"
 
@@ -192,3 +192,9 @@ fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+source /Users/jb/.config/broot/launcher/bash/br
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jb/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
