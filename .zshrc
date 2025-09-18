@@ -193,7 +193,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-source /Users/jb/.config/broot/launcher/bash/br
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jb/.rd/bin:$PATH"
