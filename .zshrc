@@ -192,16 +192,7 @@ fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-<<<<<<< HEAD
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/jburnett/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-=======
-
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jb/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
->>>>>>> refs/remotes/origin/main
