@@ -8,3 +8,13 @@ export CLICOLOR=true
 export PATH="$HOME/.cargo/bin:$HOME/.dotnet/tools:$PATH"
 
 export PATH="/Users/jb/.local/share/solana/install/active_release/bin:$PATH"
+
+if [ -f "/opt/homebrew/bin/brew" ] ; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# added by Particle CLI
+# add home bin directory to PATH if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
