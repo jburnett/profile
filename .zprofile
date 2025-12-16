@@ -5,6 +5,18 @@
 export CLICOLOR=true
 
 # Settings for both interactive and non-interactive shells
-export PATH="$HOME/.cargo/bin:$HOME/.dotnet/tools:$PATH"
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+if [ -d "$HOME/.dotnet/tools" ] ; then
+    export PATH="$HOME/.dotnet/tools:$PATH"
+fi
+if [ -d "$HOME/.local/share/solana/install/active_release/bin" ] ; then
+    export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+fi
 
-export PATH="/Users/jb/.local/share/solana/install/active_release/bin:$PATH"
+# added by Particle CLI
+# add home bin directory to PATH if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
