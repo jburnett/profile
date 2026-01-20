@@ -156,6 +156,8 @@ if [ -d /usr/share/dotnet ]; then
     fi
 fi
 
+# 01/20/2026, JB: add Claude which is in ~/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 ### DON'T add below here
 
