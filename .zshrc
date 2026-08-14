@@ -173,8 +173,6 @@ setopt SHARE_HISTORY
 # If duplicates are allowed, skip them during search
 setopt HIST_FIND_NO_DUPS
 
-[ -d "$HOME/.local/share/solana/install/active_release/bin" ] && \
-    export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 ##### DON'T add below the source statements #########################
 
