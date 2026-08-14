@@ -167,6 +167,8 @@ export PATH="$HOME/.local/bin:$PATH"
 [ ! -v ${SAVEHIST} ] && export SAVEHIST=10000
 # record timestamps in history file
 export EXTENDED_HISTORY=1
+# ignore commands with leading space
+export HIST_IGNORE_SPACE=1
 
 # Share history in every terminal session
 setopt SHARE_HISTORY
