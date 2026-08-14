@@ -195,7 +195,3 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jb/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
