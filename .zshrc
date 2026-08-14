@@ -176,10 +176,13 @@ setopt HIST_FIND_NO_DUPS
 [ -d "$HOME/.local/share/solana/install/active_release/bin" ] && \
     export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
+##### DON'T add below the source statements #########################
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.z-rupa/z.sh
 source $HOME/dotfiles/.aliases
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/broot/launcher/bash/br ] && source "$HOME/.config/broot/launcher/bash/br"
 
 # 05/30/2023, JB: added starship for more info at prompts
 #  if whence finds starship, start it
@@ -191,17 +194,7 @@ if [ -f ".env" ]; then
     source .env
 fi
 
-### DON'T add here; add above the source statements
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-autoload -Uz compinit && compinit
-
-[ -f ~/.config/broot/launcher/bash/br ] && source "$HOME/.config/broot/launcher/bash/br"
-
-export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=($HOME/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-
+# Load zsh tab completion
+autoload -Uz compinit && compinit
