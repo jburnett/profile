@@ -164,9 +164,6 @@ export PATH="$HOME/.local/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.z-rupa/z.sh
 source $HOME/dotfiles/.aliases
-if command -v plz; then
-    source <(plz --completion_script)
-fi
 
 # 05/30/2023, JB: added starship for more info at prompts
 #  if whence finds starship, start it
