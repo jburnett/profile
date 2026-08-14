@@ -159,7 +159,20 @@ fi
 # 01/20/2026, JB: add Claude which is in ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-### DON'T add below here
+# 08/14/2026, JB: command history management
+# History file for zsh; this conditional ensures a non-empty value is set
+[ ! -v ${+HISTFILE} ] && export HISTFILE=~/.zsh_history
+# How many commands to store in history
+[ ! -v ${HISTSIZE} ] && export HISTSIZE=10000
+[ ! -v ${SAVEHIST} ] && export SAVEHIST=10000
+# record timestamps in history file
+export EXTENDED_HISTORY=1
+
+# Share history in every terminal session
+setopt SHARE_HISTORY
+# If duplicates are allowed, skip them during search
+setopt HIST_FIND_NO_DUPS
+
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.z-rupa/z.sh
